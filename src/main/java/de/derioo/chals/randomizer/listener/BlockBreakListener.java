@@ -36,7 +36,6 @@ public class BlockBreakListener implements Listener {
 
     @EventHandler
     public void onBlockBreak(BlockBreakEvent event) {
-        if (!this.plugin.getJsonConfig().get("present").getAsBoolean()) return;
         Material item = event.getBlock().getType();
         this.handleType(item);
         event.getPlayer().getWorld().dropItemNaturally(event.getBlock().getLocation(), new ItemStack(plugin.getBlocks().get(item)));
