@@ -17,6 +17,7 @@ java {
 }
 
 repositories {
+    mavenCentral()
     maven("https://maven.pkg.github.com/Knerio/Simple-Chals-Server") {
         credentials {
             username = project.properties["GITHUB_USERNAME"].toString()
@@ -73,7 +74,7 @@ publishing {
         register<MavenPublication>("gpr") {
             groupId = "de.derioo.mods"
             artifactId = "randomizer"
-            version = "0.0.1"
+            version = "0.1.1"
             from(components["java"])
             artifact("build/libs/Randomizer.jar")
         }
