@@ -16,7 +16,7 @@ import java.util.Map;
 public final class Randomizer extends JavaPlugin implements Listener {
 
     @Getter
-    private Map<Material, Material> blocks = new HashMap<>();
+    private final Map<Material, Material> blocks = new HashMap<>();
 
     private Config config;
 
@@ -32,9 +32,7 @@ public final class Randomizer extends JavaPlugin implements Listener {
         Bukkit.getPluginManager().registerEvents(new BlockBreakListener(this), this);
     }
 
-    public JsonObject getJsonConfig() {
-        return config.get();
-    }
+
 
     @Override
     public void onDisable() {
