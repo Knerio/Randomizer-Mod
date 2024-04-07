@@ -10,7 +10,7 @@ plugins {
 
 group = "de.derioo.chals.randomizer"
 version = "0.0.0"
-description = "A Randomizer Mod"
+description = "Diese Mod ist beim Starten sofort aktiv und verwandelt alle abgebauten Blöcke oder Kisteninhalt zu zufälligen items"
 
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -74,7 +74,7 @@ publishing {
         register<MavenPublication>("gpr") {
             groupId = "de.derioo.mods"
             artifactId = "randomizer"
-            version = "0.1.1"
+            version = "0.1.2"
             from(components["java"])
             artifact("build/libs/Randomizer.jar")
         }
